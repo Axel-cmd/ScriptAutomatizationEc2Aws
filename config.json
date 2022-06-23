@@ -1,0 +1,9 @@
+{
+    "access_key_id": "",
+    "secret_key": "",
+    "region": "region",
+    "ec2_name": "name",
+    "ec2_image_id": "imageId",
+    "ec2_instance_type":"type",
+    "key_pair_name": "keyName"
+}
