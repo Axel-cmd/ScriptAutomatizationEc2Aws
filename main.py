@@ -40,25 +40,6 @@ def instanceEc2(session):
     instance = result['Instances'][0]
     print("Instance Id : " + instance['InstanceId'])
 
-# cluster kubernetes
-def kubernetes(session) : 
-    print("create eks")
-    iam = session.client('iam')
-    roleArn = iam.get_role(RoleName="eksclustergroup4")
-    
-    eks = createClient("eks", session)
-
-    result = eks.create_cluster(
-        name='Groupe4-Saagie-k',
-        roleArn=roleArn,
-        resourcesVpcConfig={
-
-        }
-    )
-    print("\n"+result)
-    return result
-
-
 # main function
 def main():
 
